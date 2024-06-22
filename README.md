@@ -8,12 +8,12 @@ Homepage
 
 Dive into a visually captivating landing page designed with Bootstrap components, crafted to be as inviting as a Pokémon Center.
 <br>The design adapts beautifully across different devices, ensuring you have a seamless experience no matter where you explore from.
-<br>Pokémon Search Page
+<br><br>Pokémon Search Page
 
 Search for your favorite Pokémon by name or ID with ease.
 <br>Using the magic of JavaScript async functions, the page fetches real-time data from the PokeAPI, instantly updating the content based on your input.
 <br>Discover detailed information about each Pokémon, from their types and abilities to their unique stats.
-<br>Pokémon Details Page
+<br><br>Pokémon Details Page
 
 Uncover in-depth details about any Pokémon you choose.
 From abilities and types to their distinctive stats and an artistic image, everything you need to know is elegantly presented.

@@ -18,7 +18,7 @@ Search for your favorite Pokémon by name or ID with ease.
 Uncover in-depth details about any Pokémon you choose.
 From abilities and types to their distinctive stats and an artistic image, everything you need to know is elegantly presented.
 <br>The styling with Bootstrap ensures clarity and enhances the presentation of Pokémon details.
-Pokémon Team Builder (Bonus)
+<br>Pokémon Team Builder (Bonus)
 
 
 HTML

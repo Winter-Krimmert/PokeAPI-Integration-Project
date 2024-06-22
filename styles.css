@@ -1,0 +1,117 @@
+/* styles.css */
+
+.bg-custom {
+    background-color: #ff6f61;
+}
+
+.bg-light-custom {
+    background-color: #f6d743;
+}
+
+.border-custom {
+    border-color: #ff6f61;
+}
+
+.nav-link {
+    color: #fff !important;
+}
+
+.nav-link:hover {
+    color: #ffd1c1 !important;
+}
+
+.footer {
+    padding: 10px 0;
+}
+
+.brand-text {
+    color: #fff;
+}
+
+/* Team CSS */
+
+.team-member {
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+.team-member img {
+    width: 100px;
+}
+
+.team-member h5 {
+    margin-top: 10px;
+}
+
+
+
+
+Card styling for Pokémon in the team builder
+.team-member {
+    cursor: pointer;
+    margin: 10px 0;
+}
+.team-member img {
+    width: 100px;
+}
+.team-member h5 {
+    margin-top: 10px;
+}
+
+
+/* Card styling for Pokémon in the team builder */
+.team-member {
+    cursor: pointer;
+    margin: 10px 0;
+}
+.team-member img {
+    width: 100px;
+}
+.team-member h5 {
+    margin-top: 10px;
+}
+
+/* Enhanced Pokémon card styling */
+.pokemon-card {
+    width: 300px; /* Adjusted width for the card */
+    height: auto; /* Allow height to adjust based on content */
+    margin-bottom: 20px; /* Bottom margin for spacing */
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pokemon-card .card-img-top {
+    width: 100%; /* Make the image width 100% of its parent (the card body) */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners for the image */
+    margin-bottom: 10px; /* Bottom margin for spacing */
+}
+
+.pokemon-card .card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    white-space: normal; /* Prevent title from wrapping */
+
+}
+
+.pokemon-card .card-text {
+    font-size: 14px;
+    margin-bottom: 3px;
+    white-space: normal; /* Prevent text from wrapping */
+}
+
+.pokemon-card ul {
+    margin-top: 10px;
+    padding-left: 0;
+}
+
+.pokemon-card li {
+    list-style-type: none;
+    font-size: 12px;
+    margin-bottom: 3px;
+    white-space: normal; /* Allow text to wrap */
+}

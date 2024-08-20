@@ -6,31 +6,36 @@
     <title>PokeAPI Integration Project - Search</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
+    <script src="search.js" defer></script> <!-- Reference to search.js -->
 </head>
 <body>
+    <!-- Header section with navigation bar -->
     <header>
-        <nav class="navbar navbar-expand-lg" style="background-color: #ff6f61;">
+        <nav class="navbar navbar-expand-lg navbar-light bg-custom">
             <div class="container">
+                <!-- Brand/logo and project name in navbar -->
                 <a class="navbar-brand" href="#">
                     <img src="images/pokemon-logo.svg" alt="Pokemon Logo" width="40" height="40" class="d-inline-block align-top">
                     <span class="brand-text">PokeAPI Project</span>
                 </a>
+                <!-- Navbar toggler button for mobile -->
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon" style="color: #fff;"></span>
+                    <span class="navbar-toggler-icon"></span>
                 </button>
+                <!-- Navbar links -->
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html" style="color: #fff;">Home</a>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.html">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="search.html" style="color: #fff;">Search</a>
+                            <a class="nav-link" href="search.html">Search</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="team_builder.html" style="color: #fff;">Team Builder</a>
+                            <a class="nav-link" href="team_builder.html">Team Builder</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="battle_simulator.html" style="color: #fff;">Battle Simulator</a>
+                            <a class="nav-link" href="battle_simulator.html">Battle Simulator</a>
                         </li>
                     </ul>
                 </div>
@@ -38,14 +43,14 @@
         </nav>
     </header>
 
-<div class="container mt-5">
-        <div class="jumbotron" style="background-color: #f6d743;">
+    <div class="container mt-5">
+        <div class="jumbotron team-section">
             <h1 class="display-4">Search Pokémon</h1>
-            <hr class="my-4" style="border-color: #ff6f61;">
+            <hr class="my-4 border-custom">
             <form id="pokemon-search-form">
                 <div class="form-group">
                     <label for="pokemonName">Enter Pokémon Name or ID:</label>
-                    <input type="text" class="form-control" id="pokemonName" placeholder="(i.e. Pikachu)" autocomplete="off">
+                    <input type="text" class="form-control" id="pokemonName" placeholder="(i.e. Pikachu or '1')" autocomplete="off">
                 </div>
                 <button type="submit" class="btn btn-primary">Search</button>
             </form>
@@ -55,7 +60,7 @@
         <div id="pokemon-info"></div>
     </div>
     
-    <footer class="footer" style="background-color: #ff6f61; color: #fff;">
+    <footer class="footer bg-custom text-white">
         <div class="container">
             <span class="text-muted">PokeAPI Integration Project by Winter Krimmert</span>
         </div>

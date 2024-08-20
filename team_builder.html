@@ -6,31 +6,45 @@
     <title>PokeAPI Integration Project - Team Builder</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
+    <script src="team-builder.js" defer></script> <!-- Reference to team-builder.js -->
+    <style>
+        .pokemon-card {
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.3s;
+            margin-bottom: 20px;
+        }
+        .pokemon-card.hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            border: 2px solid #ff6f61; /* Only applies when clicked */
+        }
+    </style>
 </head>
 <body>
+    <!-- Header section with navigation bar -->
     <header>
-        <nav class="navbar navbar-expand-lg" style="background-color: #ff6f61;">
+        <nav class="navbar navbar-expand-lg navbar-light bg-custom">
             <div class="container">
                 <a class="navbar-brand" href="#">
                     <img src="images/pokemon-logo.svg" alt="Pokemon Logo" width="40" height="40" class="d-inline-block align-top">
                     <span class="brand-text">PokeAPI Project</span>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon" style="color: #fff;"></span>
+                    <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html" style="color: #fff;">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="search.html" style="color: #fff;">Search</a>
-                        </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="team_builder.html" style="color: #fff;">Team Builder</a>
+                            <a class="nav-link" href="index.html">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="battle_simulator.html" style="color: #fff;">Battle Simulator</a>
+                            <a class="nav-link" href="search.html">Search</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="team_builder.html">Team Builder</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="battle_simulator.html">Battle Simulator</a>
                         </li>
                     </ul>
                 </div>
@@ -39,20 +53,31 @@
     </header>
 
     <div class="container mt-5">
-        <div class="jumbotron" style="background-color: #f6d743;">
+        <div class="jumbotron team-section">
             <h1 class="display-4">Team Builder</h1>
             <hr class="my-4" style="border-color: #ff6f61;">
-            <form id="teamForm" class="form-inline">
-                <input id="teamPokemonName" type="text" class="form-control mb-2 mr-sm-2" placeholder="Enter Pokémon name or ID">
-                <button type="submit" class="btn btn-primary mb-2">Add to Team</button>
+            <form id="pokemon-search-form" class="form-inline">
+                <input id="pokemonName" type="text" class="form-control mb-2 mr-sm-2" placeholder="Enter Pokémon name or ID">
+                <button type="submit" class="btn btn-primary mb-2">Search Pokémon</button>
             </form>
+            <p class="mt-2 mb-4" style="font-weight: normal;">Tip: Click on the Pokémon card to add it to your team!</p>
+            <div id="pokemon-info" class="mt-4 d-flex flex-wrap">
+                <!-- Pokemon cards will be dynamically added here -->
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="jumbotron team-section">
+            <h1 class="display-4">Your Team</h1>
+            <hr class="my-4" style="border-color: #ff6f61;">
             <div id="teamResult" class="mt-4 d-flex flex-wrap">
                 <!-- Cards will be dynamically added here -->
             </div>
         </div>
+    </div>
 
-
-    <footer class="footer" style="background-color: #ff6f61; color: #fff;">
+    <footer class="footer bg-custom text-white">
         <div class="container">
             <span class="text-muted">PokeAPI Integration Project by Winter Krimmert</span>
         </div>

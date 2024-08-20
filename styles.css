@@ -1,107 +1,61 @@
-/* styles.css */
-
-.bg-custom {
-    background-color: #ff6f61;
+/* Navbar styles */
+.navbar {
+    background-color: #ff6f61; /* Custom background color */
 }
 
-.bg-light-custom {
-    background-color: #f6d743;
+.navbar-brand {
+    color: #fff; /* White text color */
 }
 
-.border-custom {
-    border-color: #ff6f61;
+.navbar-brand img {
+    margin-right: 10px; /* Space between logo and text */
 }
 
-.nav-link {
-    color: #fff !important;
+.navbar-nav .nav-link {
+    color: #fff !important; /* White text color for links */
 }
 
-.nav-link:hover {
-    color: #ffd1c1 !important;
+.navbar-nav .nav-link:hover {
+    color: #ffd1c1 !important; /* Lighter color on hover */
 }
 
-.footer {
-    padding: 10px 0;
+.jumbotron hr {
+    border-color: #ff6f61; /* Custom HR color */
 }
 
-.brand-text {
-    color: #fff;
-}
-
-/* Team CSS */
-
-.team-member {
-    cursor: pointer;
-    margin: 10px 0;
-}
-
-.team-member img {
-    width: 100px;
-}
-
-.team-member h5 {
-    margin-top: 10px;
-}
-
-
-
-
-Card styling for Pokémon in the team builder
-.team-member {
-    cursor: pointer;
-    margin: 10px 0;
-}
-.team-member img {
-    width: 100px;
-}
-.team-member h5 {
-    margin-top: 10px;
-}
-
-
-/* Card styling for Pokémon in the team builder */
-.team-member {
-    cursor: pointer;
-    margin: 10px 0;
-}
-.team-member img {
-    width: 100px;
-}
-.team-member h5 {
-    margin-top: 10px;
-}
-
-/* Enhanced Pokémon card styling */
+/* Adjusted Pokémon card styling for search page */
 .pokemon-card {
-    width: 300px; /* Adjusted width for the card */
-    height: auto; /* Allow height to adjust based on content */
-    margin-bottom: 20px; /* Bottom margin for spacing */
+    width: calc(33.33% - 20px); /* 33.33% width with some margin */
+    height: auto;
+    margin: 10px;
+    display: inline-block;
+    vertical-align: top;
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 8px;
     padding: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box; /* Include padding and border in width calculation */
 }
 
 .pokemon-card .card-img-top {
-    width: 100%; /* Make the image width 100% of its parent (the card body) */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 8px; /* Rounded corners for the image */
-    margin-bottom: 10px; /* Bottom margin for spacing */
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
 }
 
 .pokemon-card .card-title {
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 5px;
-    white-space: normal; /* Prevent title from wrapping */
-
+    white-space: normal;
 }
 
 .pokemon-card .card-text {
     font-size: 14px;
     margin-bottom: 3px;
-    white-space: normal; /* Prevent text from wrapping */
+    white-space: normal;
 }
 
 .pokemon-card ul {
@@ -113,5 +67,148 @@ Card styling for Pokémon in the team builder
     list-style-type: none;
     font-size: 12px;
     margin-bottom: 3px;
-    white-space: normal; /* Allow text to wrap */
+    white-space: normal;
+}
+
+@media (max-width: 992px) {
+    .pokemon-card {
+        width: calc(50% - 20px); /* Two cards per row on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .pokemon-card {
+        width: 100%; /* One card per row on small screens */
+    }
+}
+
+/* Battle simulator team section */
+#pokemonTeam {
+    transition: max-height 0.3s ease-out;
+    max-height: none; /* Start expanded */
+}
+
+.collapsed {
+    max-height: 0;
+    overflow: hidden; /* Prevent content from showing when collapsed */
+}
+
+.team-section {
+    background-color: #f6d743; /* Light custom background color */
+    border: 1px solid #ff6f61; /* Custom border color */
+    padding: 2rem; /* Jumbotron padding */
+    border-radius: 5px; /* Optional: add rounded corners */
+}
+
+/* Forms */
+.form-control {
+    border: 1px solid #ff6f61; /* Custom border color to match Jumbotron */
+    padding: 10px; /* Adjust padding */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.form-inline .form-control {
+    margin-bottom: 0.5rem; /* Margin between inputs */
+}
+
+/* Buttons */
+.btn {
+    background-color: #ff6f61; /* Custom background color */
+    color: #fff; /* White text color */
+    border: none; /* Remove default border */
+}
+
+.btn:hover {
+    background-color: #ffd1c1; /* Lighter color on hover */
+    color: #333; /* Darker text color on hover */
+}
+
+.btn:focus {
+    box-shadow: none; /* Remove focus shadow */
+    outline: none; /* Remove outline */
+}
+
+.btn:active {
+    background-color: #ff6f61; /* Keep original button color on active */
+    color: #fff; /* Ensure text color stays white */
+}
+
+.table th {
+    background-color: #f6d743; /* Optional: Light background for headers */
+}
+
+.table th, .table td {
+    border: 0.5px solid #ff6e6168; /* Keep the light red border for other cells */
+}
+
+.pokemon-img {
+    width: 100px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Footer styles */
+.footer {
+    background-color: #ff6f61; /* Custom footer background color */
+    color: #fff; /* White text color */
+    padding: 1rem 0; /* Vertical padding */
+    text-align: center; /* Center align text */
+}
+
+/* Custom HR style for battle simulator */
+.custom-hr {
+    border-color: #ff6f61 !important;
+}
+
+/* Specific row style targeting to remove gray line */
+.table thead th, .table tbody td, .table tbody th {
+    border-top: none; /* Remove top border */
+}
+
+.table tbody tr:first-child th, .table tbody tr:first-child td {
+    border-top: none; /* Remove top border for the first row */
+}
+
+/* Remove default table borders */
+.table {
+    border-collapse: collapse; /* Ensure table borders collapse */
+}
+
+.table td, .table th {
+    border: none; /* Remove borders from all cells */
+}
+
+.table tbody tr {
+    border: none; /* Remove borders from rows */
+}
+
+#battleTableBody div {
+    border: none; /* Remove borders from divs within table body */
+    margin: 0; /* Remove margins */
+    padding: 0; /* Remove padding */
+}
+
+
+
+
+/* Style for the battle simulator table */
+#battleResult table,
+#battleResult th,
+#battleResult td {
+    border: 1px solid #ccc; /* Light gray border */
+    padding: 8px; /* Optional: Add some padding for better spacing */
+}
+
+/* Ensure no extra borders around the table */
+#battleResult table {
+    border-collapse: collapse; /* Collapse borders to avoid double borders */
+}
+
+#battleResult th, #battleResult td {
+    border-color: #ff6f61; /* Light gray border color */
+}
+
+/* Keep the HR color consistent */
+hr {
+    border: none;
+    border-top: 1px solid #ff6f61; /* Custom HR color */
 }
